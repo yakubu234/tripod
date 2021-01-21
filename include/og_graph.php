@@ -17,7 +17,6 @@ if(!empty($og_graph)){
 	$params['image'] = $img;
 	$params['link'] = 'https://www.tripodmedia.org/news.php?read='.$heading.'&dataID='.$id;
 	$params['description'] = $heading;
-
 }else{
     // defaults
 	$params['type'] = "News Website";

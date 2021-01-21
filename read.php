@@ -1,15 +1,13 @@
 <?php include "include/fetcher.php"; $page="Home"; 
 $og_graph = $_SESSION['news'];
 include "include/og_graph.php";include "include/header.php";$dat = $_GET['data'];
-if (!isset($_SESSION['news'])) {	
+if (empty($og_graph)) {	
+    echo "erorroo";die;
 	#return to homepage
 	header('Location: index.php');
 }
-
 $whereNot = fetchwhereNotID($id);
 ?>
-
-
 <div class="page-title-area">
 	<div class="container">
 		<div class="page-title-content">
