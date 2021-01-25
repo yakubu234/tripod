@@ -19,9 +19,13 @@ include "include/fetcher.php";
 
   if ($_GET['read']) {
      $ter = $_GET['read'];
-    $data = $_GET['dataID'];
+     if (!empty($_GET['a'])) {
+       $data = $_GET['a'];
+     }else{
+    $data = $_GET['dataID'];}
      $news = view($data);
     $_SESSION['news'] = $news;
-    header('Location: read.php?data='.$ter);
+    header('Location: read.php?a='.$data.'&data='.rawurldecode($ter));
   }
+  // str_replace($search, $replace,$heading);
 ?>

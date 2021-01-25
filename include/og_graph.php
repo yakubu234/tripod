@@ -1,6 +1,14 @@
 <?php
 $params = array();
-if(!empty($og_graph)){
+if(empty($og_graph)){
+	// defaults
+	$params['type'] = "News Website";
+	$params['summary'] = "Tripod Times is an online news medium established to deliver professional journalism";
+	$params['title'] = "Flash News From Tripod Times";
+	$params['image'] = "dummy news.jpg";
+	$params['link'] = "https://www.tripodmedia.org";
+	$params['description'] = "Tripod Timesis an online news medium established to deliver professional journalism devoid of sensationalism for the purpose of fostering Nigeria's unity, peace, progress and greatness";
+}else{
 	foreach ($_SESSION['news'] as $key => $value) {
 		$date = $value['time'];
 		$actor = $value['actor'];
@@ -10,21 +18,12 @@ if(!empty($og_graph)){
 		$img = $value['image'];
 		$id = $value['id'];
 	}
-	// defaults
 	$params['type'] = $category . "News By tripod times";
 	$params['summary'] = $heading;
 	$params['title'] = $heading;
 	$params['image'] = $img;
-	$params['link'] = 'https://www.tripodmedia.org/news.php?read='.$heading.'&dataID='.$id;
-	$params['description'] = $heading;
-}else{
-    // defaults
-	$params['type'] = "News Website";
-	$params['summary'] = "Tripod Times is an online news medium established to deliver professional journalism";
-	$params['title'] = "Flash News From Tripod Times";
-	$params['image'] = "dummy news.jpg";
-	$params['link'] = "https://www.tripodmedia.org";
-	$params['description'] = "Tripod Timesis an online news medium established to deliver professional journalism devoid of sensationalism for the purpose of fostering Nigeria's unity, peace, progress and greatness";
+	$params['link'] = rawurldecode('https://www.tripodmedia.org/news.php?read='.$heading.'&a='.$id);
+	$params['description'] = $heading;    
 }
 ?>
 <!doctype html>
@@ -55,7 +54,7 @@ if(!empty($og_graph)){
 	<meta property="og:site_name" content="Tripod Times"/>
 	<!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
 	<meta property="og:type" content="<?php echo $params['description'] ;?>"/> <!-- 'article' for single page  -->
-	<meta property="og:image" content="uploads/img/<?php echo $params['image'] ;?>"/> <!-- when you post this page url in facebook , this image will be shown -->
+	<meta property="og:image" content="uploads/<?php echo $params['image'] ;?>"/> <!-- when you post this page url in facebook , this image will be shown -->
 	<!-- facebook open graph ends here -->
 
 	<!-- desktop bookmark -->

@@ -4,19 +4,6 @@ ob_start();
 error_reporting(E_ALL);
 include "connect.php";
 $conn = DB();
-switch ($_GET['func']) {
-	case "edit":
-	EditStudent($_POST);
-	break;
-	case "Upl oadImage":
-	UploadImage();
-	break;
-}
-
-function type(){
-	
-}
-
 
 function fetcher(){
 	$conn =DB();

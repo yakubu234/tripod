@@ -1,11 +1,14 @@
 <?php include "include/fetcher.php"; $page="Home"; 
 $og_graph = $_SESSION['news'];
-include "include/og_graph.php";include "include/header.php";$dat = $_GET['data'];
 if (empty($og_graph)) {	
-    echo "erorroo";die;
-	#return to homepage
+	$dat = $_GET['a'];
+	$_SESSION['news'] = view($dat);
+    if (empty($_SESSION['news'])) {
+    	#return to homepage
 	header('Location: index.php');
+    }	
 }
+include "include/og_graph.php";include "include/header.php";$dat = $_GET['data'];
 $whereNot = fetchwhereNotID($id);
 ?>
 <div class="page-title-area">
@@ -200,11 +203,11 @@ $whereNot = fetchwhereNotID($id);
 							foreach($whereNot as $key => $value) {
 								echo'
 									<article class="item">
-										<a href="news.php?read='.$value["heading"].'&dataID='.$value["id"].'" class="thumb">
+										<a href="news.php?read='.rawurldecode($value["heading"]).'&dataID='.$value["id"].'" class="thumb">
 											<img src="uploads/'.$value['image'].'"  >
 										</a>
 										<div class="info">
-											<h4 class="title usmall"><a href="news.php?read='.$value["heading"].'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 46).' ....</a></h4>
+											<h4 class="title usmall"><a href="news.php?read='.rawurldecode($value["heading"]).'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 46).' ....</a></h4>
 											<span>'.date("d F Y ",strtotime($value['time'])).'</span>
 										</div>
 									</article>
@@ -268,11 +271,11 @@ $whereNot = fetchwhereNotID($id);
 								if ($key <= 3) {continue;}
 								echo'
 									<article class="item">
-										<a href="news.php?read='.$value["heading"].'&dataID='.$value["id"].'" class="thumb">
+										<a href="news.php?read='.rawurldecode($value["heading"]).'&dataID='.$value["id"].'" class="thumb">
 											<img src="uploads/'.$value['image'].'"  >
 										</a>
 										<div class="info">
-											<h4 class="title usmall"><a href="news.php?read='.$value["heading"].'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 46).' ....</a></h4>
+											<h4 class="title usmall"><a href="news.php?read='.rawurldecode($value["heading"]).'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 46).' ....</a></h4>
 											<span>'.date("d F Y ",strtotime($value['time'])).'</span>
 										</div>
 									</article>
