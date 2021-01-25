@@ -44,7 +44,7 @@ if(empty($og_graph)){
 	<meta name="twitter:url" content="http://twitter.com"/>
 	<meta name="twitter:title" content="<?php echo $params['title'] ;?>"/> <!-- maximum 140 char -->
 	<meta name="twitter:description" content="<?php echo $params['title'] ;?>"/> <!-- maximum 140 char -->
-	<meta name="twitter:image" content="uploads/<?php echo $params['image'] ;?>"/>  <!-- when you post this page url in twitter , this image will be shown -->
+	<meta name="twitter:image" content="https://tripodmedia.org/uploads/<?php echo $params['image'] ;?>"/>  <!-- when you post this page url in twitter , this image will be shown -->
 	<!-- twitter card ends here -->
 
 	<!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
@@ -54,7 +54,7 @@ if(empty($og_graph)){
 	<meta property="og:site_name" content="Tripod Times"/>
 	<!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
 	<meta property="og:type" content="<?php echo $params['description'] ;?>"/> <!-- 'article' for single page  -->
-	<meta property="og:image" content="uploads/<?php echo $params['image'] ;?>"/> <!-- when you post this page url in facebook , this image will be shown -->
+	<meta property="og:image" content="https://tripodmedia.org/uploads/<?php echo $params['image'] ;?>"/> <!-- when you post this page url in facebook , this image will be shown -->
 	<!-- facebook open graph ends here -->
 
 	<!-- desktop bookmark -->

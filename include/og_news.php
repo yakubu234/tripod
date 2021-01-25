@@ -1,5 +1,4 @@
 <?php
-$params = array();
 if(!empty($og_graph)){
 	foreach ($_SESSION['news'] as $key => $value) {
 		$date = $value['time'];
