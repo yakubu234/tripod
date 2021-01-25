@@ -5,7 +5,7 @@ if(empty($og_graph)){
 	$params['type'] = "News Website";
 	$params['summary'] = "Tripod Times is an online news medium established to deliver professional journalism";
 	$params['title'] = "Flash News From Tripod Times";
-	$params['image'] = "dummy news.jpg";
+	$params['image'] = "dummynews.jpg";
 	$params['link'] = "https://www.tripodmedia.org";
 	$params['description'] = "Tripod Timesis an online news medium established to deliver professional journalism devoid of sensationalism for the purpose of fostering Nigeria's unity, peace, progress and greatness";
 }else{
