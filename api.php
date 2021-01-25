@@ -1,6 +1,6 @@
 <?php 
-$search  = array('$', '!', ' ', '#', '%','^','&','*','(',')',',','?','  ','/',';',':',"'",'"','@','.');
-$replace = array('-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-');
+$search  = array('$', '!', ' ','  ','/');
+$replace = array('-', '-', '-', '', '-');
 $API_key    = 'AIzaSyBj7PO03GgxNUOLwcGgjHKgWdwtFfodtrA'; //my API key
 $channelID  = 'UCjhsjqGwn3d6BPktTvqJAwA'; //my channel ID
 $maxResults = 5;$video_list = json_decode(file_get_contents('https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId='.$channelID.'&maxResults='.$maxResults.'&key='.$API_key.''));

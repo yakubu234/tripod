@@ -8,7 +8,7 @@ if (empty($og_graph)) {
 	header('Location: index.php');
     }	
 }
-include "include/og_graph.php";include "include/header.php";$dat = $_GET['data'];
+include "include/og_news.php";include "include/header.php";$dat = $_GET['data'];
 $whereNot = fetchwhereNotID($id);
 ?>
 <div class="page-title-area">
