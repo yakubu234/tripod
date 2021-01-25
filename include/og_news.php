@@ -10,12 +10,12 @@ if(!empty($og_graph)){
 		$img = $value['image'];
 		$id = $value['id'];
 	}
-	$params['type'] = $category . "News By tripod times";
-	$params['summary'] = $heading;
-	$params['title'] = $heading;
-	$params['image'] = $img;
-	$params['link'] = rawurldecode('https://www.tripodmedia.org/news.php?read='.$heading.'&a='.$id);
-	$params['description'] = $heading; 
+	$paramstype = $category . "News By tripod times";
+	$paramsSummary = $heading;
+	$paramsTitle = $heading;
+	$paramsImage = $img;
+	$paramsLink = rawurldecode('https://www.tripodmedia.org/news.php?read='.$heading.'&a='.$id);
+	$paramsDescription = $heading; 
 }else{header('Location: index.php');}
 ?>
 <!doctype html>
@@ -25,28 +25,28 @@ if(!empty($og_graph)){
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Tripod Media Company| <?php echo $page." | ".$dataView; ?> </title>
 	<link rel="icon" type="image/png" href="assets/img/TRIPODMEDIALOGO.png">
-	<meta name="description" content="<?php echo $params['description'] ;?>"/>
-	<meta name="keywords" content="keyword1, keyword2"/>
+	<meta name="description" content="<?php echo $paramsDescription ;?>"/>
+	<meta name="keywords" content="<?php echo $paramsSummary ?>"/>
 	<meta name="author" content="TripodTimes"/>
 
 	<!-- twitter card starts from here, if you don't need remove this section -->
-	<meta name="twitter:card" content="<?php echo $params['description'] ;?>"/>
+	<meta name="twitter:card" content="<?php echo $paramsDescription ;?>"/>
 	<meta name="twitter:site" content="@grandrubicon"/>
 	<meta name="twitter:creator" content="@grandrubicon"/>
 	<meta name="twitter:url" content="http://twitter.com"/>
-	<meta name="twitter:title" content="<?php echo $params['title'] ;?>"/> <!-- maximum 140 char -->
-	<meta name="twitter:description" content="<?php echo $params['title'] ;?>"/> <!-- maximum 140 char -->
-	<meta name="twitter:image" content="uploads/<?php echo $params['image'] ;?>"/>  <!-- when you post this page url in twitter , this image will be shown -->
+	<meta name="twitter:title" content="<?php echo $paramsTitle ;?>"/> <!-- maximum 140 char -->
+	<meta name="twitter:description" content="<?php echo $paramsTitle ;?>"/> <!-- maximum 140 char -->
+	<meta name="twitter:image" content="uploads/<?php echo $paramsImage;?>"/>  <!-- when you post this page url in twitter , this image will be shown -->
 	<!-- twitter card ends here -->
 
 	<!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
-	<meta property="og:title" content="<?php echo $params['title'] ;?>"/>
-	<meta property="og:url" content="<?php echo $params['link'] ;?>"/>
+	<meta property="og:title" content="<?php echo $paramsTitle ;?>"/>
+	<meta property="og:url" content="<?php echo $paramsLink;?>"/>
 	<meta property="og:locale" content="en_US"/>
 	<meta property="og:site_name" content="Tripod Times"/>
 	<!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
-	<meta property="og:type" content="<?php echo $params['description'] ;?>"/> <!-- 'article' for single page  -->
-	<meta property="og:image" content="uploads/<?php echo $params['image'] ;?>"/> <!-- when you post this page url in facebook , this image will be shown -->
+	<meta property="og:type" content="<?php echo $paramsDescription;?>"/> <!-- 'article' for single page  -->
+	<meta property="og:image" content="uploads/<?php echo $paramsImage;?>"/> <!-- when you post this page url in facebook , this image will be shown -->
 	<!-- facebook open graph ends here -->
 
 	<!-- desktop bookmark -->
