@@ -10,13 +10,13 @@ $item = array_shift($indexData);
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="single-main-default-news-inner">
-					<a href="<?php echo 'news.php?read='.rawurldecode($item["heading"]).'&dataID='.$item["id"]; ?>">
+					<a href="<?php echo 'news.php?read='.str_replace($search, $replace,rawurldecode($item["heading"])).'&dataID='.$item["id"]; ?>">
 						<img src="uploads/<?php echo $item['image']; ?>" alt="image" id="image-height">
 					</a>
 					<div class="news-content">
 						<div class="tag"><?php echo $item['category'] ?> </div>
 						<h3>
-							<a href="<?php echo 'news.php?read='.rawurldecode($item["heading"]).'&dataID='.$item["id"]; ?>"><?php echo  substr($item['heading'], 0, 76); ?> ...</a>
+							<a href="<?php echo 'news.php?read='.str_replace($search, $replace,rawurldecode($item["heading"])).'&dataID='.$item["id"]; ?>"><?php echo  substr($item['heading'], 0, 76); ?> ...</a>
 						</h3>
 						<span><?php echo date("d F Y h:i:s a",$item['time']); ?></span>
 					</div>
@@ -31,13 +31,13 @@ $item = array_shift($indexData);
 						echo '
 							<div class="col-sm-6" >
 								<div class="single-main-default-news">
-									<a href="news.php?read='.rawurldecode($elem["heading"]).'&dataID='.$elem["id"].'">
+									<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">
 										<img src="uploads/'.$elem['image'].'" id="image-height-two" alt="image">
 									</a>
 									<div class="news-content">
 										<div class="tag">'.$elem["category"].'</div>
 										<h3>
-											<a href="news.php?read='.rawurldecode($elem["heading"]).'&dataID='.$elem["id"].'">'.substr($elem["heading"], 0, 36).' ....</a>
+											<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">'.substr($elem["heading"], 0, 36).' ....</a>
 										</h3>
 										<span>'.date("d F Y ",strtotime($elem['time'])).'</span>
 									</div>
@@ -70,16 +70,16 @@ $item = array_shift($indexData);
 								<div class="col-lg-6">
 									<div class="single-most-popular-news">
 										<div class="popular-news-image">
-											<a href="news.php?read='.rawurldecode($elem["heading"]).'&dataID='.$elem["id"].'">
+											<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">
 												<img src="uploads/'.$elem['image'].'" id="heigh-one" alt="image">
 											</a>
 										</div>
 										<div class="popular-news-content">
 											<span>'.$elem["location"].'</span>
 											<h3>
-												<a href="news.php?read='.rawurldecode($elem["heading"]).'&dataID='.$elem["id"].'">'.substr($elem["heading"], 0, 50).' ....</a>
+												<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">'.substr($elem["heading"], 0, 50).' ....</a>
 											</h3>
-											<p><a href="news.php?read='.rawurldecode($elem["heading"]).'&dataID='.$elem["id"].'">Patricia</a> / '.date("d F Y ",strtotime($elem['time'])).'</p>
+											<p><a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">Patricia</a> / '.date("d F Y ",strtotime($elem['time'])).'</p>
 										</div>
 									</div>
 								</div>
@@ -100,7 +100,7 @@ $item = array_shift($indexData);
 								<div class="row align-items-center">
 									<div class="col-lg-4 col-sm-4">
 										<div class="post-image">
-											<a href="news.php?read='.rawurldecode($elem["heading"]).'&dataID='.$elem["id"].'">
+											<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">
 												<img src="uploads/'.$elem['image'].'" id="height-second" alt="image">
 											</a>
 										</div>
@@ -109,7 +109,7 @@ $item = array_shift($indexData);
 										<div class="post-content">
 											<span>'.$elem["location"].'</span>
 											<h3>
-												<a href="news.php?read='.rawurldecode($elem["heading"]).'&dataID='.$elem["id"].'">'.substr($elem["heading"], 0, 39).' ....</a>
+												<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">'.substr($elem["heading"], 0, 39).' ....</a>
 											</h3>
 											<p>'.date("d F Y ",strtotime($elem['time'])).'</p>
 										</div>
@@ -138,16 +138,16 @@ $item = array_shift($indexData);
 						echo '
 						<div class="single-politics-news">
 							<div class="politics-news-image">
-								<a href="news.php?read='.rawurldecode($elemment["heading"]).'&dataID='.$elemment["id"].'">
+								<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemment["heading"])).'&dataID='.$elemment["id"].'">
 									<img src="uploads/'.$elemment['image'].'" alt="image" id="image-height-i">
 								</a>
 							</div>
 							<div class="politics-news-content">
 								<span>'.$elemment["category"].'</span>
 								<h3>
-									<a href="news.php?read='.rawurldecode($elemment["heading"]).'&dataID='.$elemment["id"].'">'.substr($elemment["heading"], 0, 36).' ....</a>
+									<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemment["heading"])).'&dataID='.$elemment["id"].'">'.substr($elemment["heading"], 0, 36).' ....</a>
 								</h3>
-								<p><a href="news.php?read='.rawurldecode($elemment["heading"]).'&dataID='.$elemment["id"].'">Jonson Steven</a> /'.date("d F Y ",strtotime($elemment['time'])).'</p>
+								<p><a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemment["heading"])).'&dataID='.$elemment["id"].'">Jonson Steven</a> /'.date("d F Y ",strtotime($elemment['time'])).'</p>
 							</div>
 						</div>
 							';
@@ -165,13 +165,13 @@ $item = array_shift($indexData);
 						echo '
 							<div class="col-lg-6 col-md-6">
 								<div class="politics-news-post-box">
-									<a href="news.php?read='.rawurldecode($elemm["heading"]).'&dataID='.$elemm["id"].'">
+									<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemm["heading"])).'&dataID='.$elemm["id"].'">
 										<img src="uploads/'.rawurldecode($elemm['image']).'" id="image-height-two" alt="image">
 									</a>
 									<div class="politics-news-content">
 										<div style="display:inline-block;font-size:14px;background-color:#048c0b;color:#fff;padding:2px 10px;font-weight:400;-webkit-transition:.5s;transition:.5s">'.$elemm["category"].'</div>
 										<h3>
-											<a href="news.php?read='.rawurldecode($elemm["heading"]).'&dataID='.$elemm["id"].'">'.substr($elemm["heading"], 0, 36).' ....</a>
+											<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemm["heading"])).'&dataID='.$elemm["id"].'">'.substr($elemm["heading"], 0, 36).' ....</a>
 										</h3>
 										<p>'.date("d F Y ",strtotime($elemm['time'])).'</p>
 									</div>

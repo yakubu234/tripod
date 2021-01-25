@@ -203,11 +203,11 @@ $whereNot = fetchwhereNotID($id);
 							foreach($whereNot as $key => $value) {
 								echo'
 									<article class="item">
-										<a href="news.php?read='.rawurldecode($value["heading"]).'&dataID='.$value["id"].'" class="thumb">
+										<a href="news.php?read='.str_replace($search, $replace,rawurldecode($value["heading"])).'&dataID='.$value["id"].'" class="thumb">
 											<img src="uploads/'.$value['image'].'"  >
 										</a>
 										<div class="info">
-											<h4 class="title usmall"><a href="news.php?read='.rawurldecode($value["heading"]).'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 46).' ....</a></h4>
+											<h4 class="title usmall"><a href="news.php?read='.str_replace($search, $replace,rawurldecode($value["heading"])).'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 46).' ....</a></h4>
 											<span>'.date("d F Y ",strtotime($value['time'])).'</span>
 										</div>
 									</article>
@@ -271,11 +271,11 @@ $whereNot = fetchwhereNotID($id);
 								if ($key <= 3) {continue;}
 								echo'
 									<article class="item">
-										<a href="news.php?read='.rawurldecode($value["heading"]).'&dataID='.$value["id"].'" class="thumb">
+										<a href="news.php?read='.str_replace($search, $replace,rawurldecode($value["heading"])).'&dataID='.$value["id"].'" class="thumb">
 											<img src="uploads/'.$value['image'].'"  >
 										</a>
 										<div class="info">
-											<h4 class="title usmall"><a href="news.php?read='.rawurldecode($value["heading"]).'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 46).' ....</a></h4>
+											<h4 class="title usmall"><a href="news.php?read='.str_replace($search, $replace,rawurldecode($value["heading"])).'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 46).' ....</a></h4>
 											<span>'.date("d F Y ",strtotime($value['time'])).'</span>
 										</div>
 									</article>

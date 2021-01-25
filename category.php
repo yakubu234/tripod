@@ -23,7 +23,7 @@ if($dat == "Ogun State" ||$dat == "Nigeria" ||$dat == "AFRICA" ||$dat == "World"
 					<div class="row align-items-center">
 						<div class="col-lg-4">
 							<div class="news-image">
-								<a href="news.php?read='.rawurldecode($value["heading"]).'&dataID='.$value["id"].'">
+								<a href="news.php?read='.str_replace($search, $replace,rawurldecode($value["heading"])).'&dataID='.$value["id"].'">
 									<img src="uploads/'.$value['image'].'" style="height:200px;width:100%;" alt="image">
 								</a>
 							</div>
@@ -32,10 +32,10 @@ if($dat == "Ogun State" ||$dat == "Nigeria" ||$dat == "AFRICA" ||$dat == "World"
 							<div class="news-content">
 								<span>'.$value["category"].'</span>
 								<h3>
-									<a href="news.php?read='.rawurldecode($value["heading"]).'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 66).' ....</a>
+									<a href="news.php?read='.str_replace($search, $replace,rawurldecode($value["heading"])).'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 66).' ....</a>
 								</h3>
 								<p>'.mb_strimwidth(strip_tags($value["news"]), 0, 135).' ....</p>
-								<p><a href="news.php?read='.rawurldecode($value["heading"]).'&dataID='.$value["id"].'">'.$value["actor"].'</a> / '.date("d F Y ",strtotime($value['time'])).'</p>
+								<p><a href="news.php?read='.str_replace($search, $replace,rawurldecode($value["heading"])).'&dataID='.$value["id"].'">'.$value["actor"].'</a> / '.date("d F Y ",strtotime($value['time'])).'</p>
 							</div>
 						</div>
 					</div>
@@ -63,11 +63,11 @@ if($dat == "Ogun State" ||$dat == "Nigeria" ||$dat == "AFRICA" ||$dat == "World"
 						<?php foreach ($ribbon as $key => $value) {
 							echo '
 							<article class="item">
-							<a href="news.php?read='.rawurldecode($value["heading"]).'&dataID='.$value["id"].'" class="thumb">
+							<a href="news.php?read='.str_replace($search, $replace,rawurldecode($value["heading"])).'&dataID='.$value["id"].'" class="thumb">
 								<img src="uploads/'.$value['image'].'"  >
 							</a>
 							<div class="info">
-								<h4 class="title usmall"><a href="news.php?read='.rawurldecode($value["heading"]).'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 46).' ....</a></h4>
+								<h4 class="title usmall"><a href="news.php?read='.str_replace($search, $replace,rawurldecode($value["heading"])).'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 46).' ....</a></h4>
 								<span>'.date("d F Y ",strtotime($value['time'])).'</span>
 							</div>
 						</article>
