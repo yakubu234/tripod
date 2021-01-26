@@ -102,7 +102,12 @@ $fetcher = fetcher();
 			n.scrollTop = n.scrollHeight;      
 		}
 
-		$('#example').DataTable();
+		$('#example').DataTable( {
+        rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
+        responsive: true
+    } );
 
 		var deleteLinks = document.querySelectorAll('.del');
 

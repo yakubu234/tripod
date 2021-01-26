@@ -73,7 +73,7 @@
 						</li>
 						<li>
 							<i class='bx bx-user'></i>
-							<a href="login.html">Login</a>
+							<a href="login.php">Login</a>
 						</li>
 					</ul>
 				</div>
@@ -124,7 +124,7 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="news.php?fetchTypeLoc=AFRICA" class="nav-link">
+										<a href="news.php?fetchTypeLoc=Africa" class="nav-link">
 											AFRICA
 										</a>
 									</li>
@@ -192,7 +192,7 @@
 										</a>
 										<ul class="dropdown-menu">
 											<li class="nav-item">
-												<a href="login.html" class="nav-link">
+												<a href="login.php" class="nav-link">
 													Login
 												</a>
 											</li>
