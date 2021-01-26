@@ -22,10 +22,11 @@ if (isset($_SESSION['stuData'])) {
 	$location = $datagetUp['location'];
 	$actor = $datagetUp['actor'];
 	$image = $datagetUp['image'];
+	$replacement = str_replace($search, $replace,$heading);
 	
-	$link =  'https://tripodmedia.org/news.php?read='.$heading.'&dataID='.$insid;
+	$link =  'https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid;
 
-	$linkD =  '<b style="color:black;" >'.$heading.' </b><br><a style="color:red;" href ="https://tripodmedia.org/news.php?read='.$heading.'&dataID='.$insid.'" target="_blank" id="p1">https://tripodmedia.org/news.php?read='.$heading.'&dataID='.$insid.'<a/>';
+	$linkD =  '<b style="color:black;" >'.$replacement.' </b><br><a style="color:red;" href ="https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid.'" target="_blank" id="p1">https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid.'<a/>';
 }else{
 	echo "<script> alert('Login First')</script>";
 	header('refresh:0;url=../login.php');
