@@ -39,7 +39,7 @@ include "og.php";
 	<meta charset="utf-8">
 	<title>Tripod Media Company| <?php echo $page." | ".$dataView; ?> </title>
 	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:title" content="<?php echo $heading;?>" />
-	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:type" content="<?php echo $heading?>" />
+	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:type" content="article" />
 	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:url" content="<?php  echo $link;?>" />
 	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:image" content="https://tripodmedia.org/uploads/<?php echo $image;?>" />
 	<meta property="og:image:secure_url" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
@@ -50,7 +50,7 @@ include "og.php";
 	<meta property="og:locale" content="en_US"/>
 	<meta property="og:site_name" content="Tripod Times"/>
 	<!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
-	<meta property="og:type" content="<?php echo $heading;?>"/> <!-- 'article' for single page  -->
+	<meta property="og:type" content="article"/> <!-- 'article' for single page  -->
 	<meta property="og:image" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/> <!-- when you post this page url in facebook , this image will be shown -->
 	<!-- facebook open graph ends here -->	
 	<!-- twitter card starts from here, if you don't need remove this section -->
