@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Tripod Media Company| <?php echo $page." | ".$dataView; ?> </title>
+	<title>Tripod Media Company|  </title>
 	<link rel="icon" type="image/png" href="../assets/img/TRIPODMEDIALOGO.png">
 	<meta name="description" content=" Admin Dashboard;"/>
 	<meta name="keywords" content="keyword1, keyword2"/>
