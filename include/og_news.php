@@ -9,7 +9,7 @@ if(!empty($og_graph)){
 		$img = $value['image'];
 		$id = $value['id'];
 	}
-	$paramstype = $category . "News By tripod times";
+	$paramstype = "News By tripod times";
 	$paramsSummary = $heading;
 	$paramsTitle = $heading;
 	$paramsImage = $img;
@@ -28,7 +28,7 @@ if(!empty($og_graph)){
 	<meta property="og:locale" content="en_US"/>
 	<meta property="og:site_name" content="Tripod Times"/>
 	<!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
-	<meta property="og:type" content="<?php echo $paramsDescription;?>"/> <!-- 'article' for single page  -->
+	<meta property="og:type" content="article"/> <!-- 'article' for single page  -->
 	<meta property="og:image" content="uploads/<?php echo $paramsImage;?>"/> <!-- when you post this page url in facebook , this image will be shown -->
 	<!-- facebook open graph ends here -->	
 	<!-- twitter card starts from here, if you don't need remove this section -->

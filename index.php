@@ -5,6 +5,19 @@ if (!isset($_SESSION['indexData'])) {
 $indexData = $_SESSION['indexData'];
 $item = array_shift($indexData);
 ?>
+
+<div class="overlay-rid" >
+	<div class='popup'>
+		<div class='cnt223'>
+			<p>
+				<img src="tripodimage45.jpeg" class="alert-image-s">
+				<br/>
+				<a href='' class='close'>Close</a>
+			</p>
+		</div>
+	</div>
+</div>
+
 <section class="main-default-news-area">
 	<div class="container">
 		<div class="row">
@@ -29,21 +42,21 @@ $item = array_shift($indexData);
 					<?php
 					foreach ($indexData as $index => $elem) {
 						echo '
-							<div class="col-sm-6" >
-								<div class="single-main-default-news">
-									<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">
-										<img src="uploads/'.$elem['image'].'" id="image-height-two" alt="image">
-									</a>
-									<div class="news-content">
-										<div class="tag">'.$elem["category"].'</div>
-										<h3>
-											<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">'.substr($elem["heading"], 0, 36).' ....</a>
-										</h3>
-										<span>'.date("d F Y ",strtotime($elem['time'])).'</span>
-									</div>
-								</div>
-							</div>
-							';
+						<div class="col-sm-6" >
+						<div class="single-main-default-news">
+						<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">
+						<img src="uploads/'.$elem['image'].'" id="image-height-two" alt="image">
+						</a>
+						<div class="news-content">
+						<div class="tag">'.$elem["category"].'</div>
+						<h3>
+						<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">'.substr($elem["heading"], 0, 36).' ....</a>
+						</h3>
+						<span>'.date("d F Y ",strtotime($elem['time'])).'</span>
+						</div>
+						</div>
+						</div>
+						';
 						if ($index >= 3) {break;}
 					}
 					?>
@@ -67,22 +80,22 @@ $item = array_shift($indexData);
 						$fetch = fetchType('Ogun State'); 
 						foreach ($indexData as $index => $elem) {
 							echo '
-								<div class="col-lg-6">
-									<div class="single-most-popular-news">
-										<div class="popular-news-image">
-											<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">
-												<img src="uploads/'.$elem['image'].'" id="heigh-one" alt="image">
-											</a>
-										</div>
-										<div class="popular-news-content">
-											<span>'.$elem["location"].'</span>
-											<h3>
-												<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">'.substr($elem["heading"], 0, 50).' ....</a>
-											</h3>
-											<p><a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">Patricia</a> / '.date("d F Y ",strtotime($elem['time'])).'</p>
-										</div>
-									</div>
-								</div>
+							<div class="col-lg-6">
+							<div class="single-most-popular-news">
+							<div class="popular-news-image">
+							<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">
+							<img src="uploads/'.$elem['image'].'" id="heigh-one" alt="image">
+							</a>
+							</div>
+							<div class="popular-news-content">
+							<span>'.$elem["location"].'</span>
+							<h3>
+							<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">'.substr($elem["heading"], 0, 50).' ....</a>
+							</h3>
+							<p><a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">Patricia</a> / '.date("d F Y ",strtotime($elem['time'])).'</p>
+							</div>
+							</div>
+							</div>
 							';
 							if ($index >= 1) {break;}
 						}
@@ -96,30 +109,30 @@ $item = array_shift($indexData);
 						if ($index <= 1) {continue;}
 
 						echo '
-							<div class="most-popular-post">
-								<div class="row align-items-center">
-									<div class="col-lg-4 col-sm-4">
-										<div class="post-image">
-											<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">
-												<img src="uploads/'.$elem['image'].'" id="height-second" alt="image">
-											</a>
-										</div>
-									</div>
-									<div class="col-lg-8 col-sm-8">
-										<div class="post-content">
-											<span>'.$elem["location"].'</span>
-											<h3>
-												<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">'.substr($elem["heading"], 0, 39).' ....</a>
-											</h3>
-											<p>'.date("d F Y ",strtotime($elem['time'])).'</p>
-										</div>
-									</div>
-								</div>
-							</div>
+						<div class="most-popular-post">
+						<div class="row align-items-center">
+						<div class="col-lg-4 col-sm-4">
+						<div class="post-image">
+						<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">
+						<img src="uploads/'.$elem['image'].'" id="height-second" alt="image">
+						</a>
+						</div>
+						</div>
+						<div class="col-lg-8 col-sm-8">
+						<div class="post-content">
+						<span>'.$elem["location"].'</span>
+						<h3>
+						<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elem["heading"])).'&dataID='.$elem["id"].'">'.substr($elem["heading"], 0, 39).' ....</a>
+						</h3>
+						<p>'.date("d F Y ",strtotime($elem['time'])).'</p>
+						</div>
+						</div>
+						</div>
+						</div>
 						';
 						if ($index >= 3) {break;}
 					}
-					 ?>
+					?>
 					
 
 				</div>
@@ -137,20 +150,20 @@ $item = array_shift($indexData);
 						if ($index <= 3) {continue;}
 						echo '
 						<div class="single-politics-news">
-							<div class="politics-news-image">
-								<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemment["heading"])).'&dataID='.$elemment["id"].'">
-									<img src="uploads/'.$elemment['image'].'" alt="image" id="image-height-i">
-								</a>
-							</div>
-							<div class="politics-news-content">
-								<span>'.$elemment["category"].'</span>
-								<h3>
-									<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemment["heading"])).'&dataID='.$elemment["id"].'">'.substr($elemment["heading"], 0, 36).' ....</a>
-								</h3>
-								<p><a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemment["heading"])).'&dataID='.$elemment["id"].'">Jonson Steven</a> /'.date("d F Y ",strtotime($elemment['time'])).'</p>
-							</div>
+						<div class="politics-news-image">
+						<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemment["heading"])).'&dataID='.$elemment["id"].'">
+						<img src="uploads/'.$elemment['image'].'" alt="image" id="image-height-i">
+						</a>
 						</div>
-							';
+						<div class="politics-news-content">
+						<span>'.$elemment["category"].'</span>
+						<h3>
+						<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemment["heading"])).'&dataID='.$elemment["id"].'">'.substr($elemment["heading"], 0, 36).' ....</a>
+						</h3>
+						<p><a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemment["heading"])).'&dataID='.$elemment["id"].'">Jonson Steven</a> /'.date("d F Y ",strtotime($elemment['time'])).'</p>
+						</div>
+						</div>
+						';
 						if ($index >= 4) {break;}
 					}
 					?>
@@ -160,27 +173,27 @@ $item = array_shift($indexData);
 					<div class="row">
 
 						<?php
-					foreach ($indexData as $index => $elemm) {
-						if ($index <= 4) {continue;}
-						echo '
+						foreach ($indexData as $index => $elemm) {
+							if ($index <= 4) {continue;}
+							echo '
 							<div class="col-lg-6 col-md-6">
-								<div class="politics-news-post-box">
-									<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemm["heading"])).'&dataID='.$elemm["id"].'">
-										<img src="uploads/'.rawurldecode($elemm['image']).'" id="image-height-two" alt="image">
-									</a>
-									<div class="politics-news-content">
-										<div style="display:inline-block;font-size:14px;background-color:#048c0b;color:#fff;padding:2px 10px;font-weight:400;-webkit-transition:.5s;transition:.5s">'.$elemm["category"].'</div>
-										<h3>
-											<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemm["heading"])).'&dataID='.$elemm["id"].'">'.substr($elemm["heading"], 0, 36).' ....</a>
-										</h3>
-										<p>'.date("d F Y ",strtotime($elemm['time'])).'</p>
-									</div>
-								</div>
+							<div class="politics-news-post-box">
+							<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemm["heading"])).'&dataID='.$elemm["id"].'">
+							<img src="uploads/'.rawurldecode($elemm['image']).'" id="image-height-two" alt="image">
+							</a>
+							<div class="politics-news-content">
+							<div style="display:inline-block;font-size:14px;background-color:#048c0b;color:#fff;padding:2px 10px;font-weight:400;-webkit-transition:.5s;transition:.5s">'.$elemm["category"].'</div>
+							<h3>
+							<a href="news.php?read='.str_replace($search, $replace,rawurldecode($elemm["heading"])).'&dataID='.$elemm["id"].'">'.substr($elemm["heading"], 0, 36).' ....</a>
+							</h3>
+							<p>'.date("d F Y ",strtotime($elemm['time'])).'</p>
+							</div>
+							</div>
 							</div>
 							';
-						if ($index >= 8) {break;}
-					}
-					?>
+							if ($index >= 8) {break;}
+						}
+						?>
 
 					</div>
 				</div>
@@ -341,5 +354,25 @@ $item = array_shift($indexData);
 <script src="assets/js/wow.min.js"></script>
 
 <script src="assets/js/main.js"></script>
+<script type='text/javascript'>
+	$(function(){
+		// var overlay = $('<div class="overlay-rid"></div>');
+		// overlay.show();
+		// overlay.appendTo(document.body);
+		$('.overlay-rid').show();
+		$('.popup').show();
+		$('.close').click(function(){
+			$('.overlay-rid').hide();
+			overlay.appendTo(document.body).remove();
+			return false;
+		});
+
+		$('.x').click(function(){
+			$('.overlay-rid').hide();
+			overlay.appendTo(document.body).remove();
+			return false;
+		});
+	});
+</script>
 </body>
 </html>
