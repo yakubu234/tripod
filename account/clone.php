@@ -32,7 +32,6 @@
 	<link rel="stylesheet" type="text/css" href="../DataTables/datatables.min.css"/>
 </head>
 <body>
-<body>
 
 	<div class="preloader">
 		<div class="loader">
