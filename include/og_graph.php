@@ -30,23 +30,7 @@ if(empty($og_graph)){
 <html lang="zxx">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Tripod Media Company| <?php echo $page." | ".$dataView; ?> </title>
-	<link rel="icon" type="image/png" href="assets/img/TRIPODMEDIALOGO.png">
-	<meta name="description" content="<?php echo $params['description'] ;?>"/>
-	<meta name="keywords" content="keyword1, keyword2"/>
-	<meta name="author" content="TripodTimes"/>
-
-	<!-- twitter card starts from here, if you don't need remove this section -->
-	<meta name="twitter:card" content="<?php echo $params['description'] ;?>"/>
-	<meta name="twitter:site" content="@grandrubicon"/>
-	<meta name="twitter:creator" content="@grandrubicon"/>
-	<meta name="twitter:url" content="http://twitter.com"/>
-	<meta name="twitter:title" content="<?php echo $params['title'] ;?>"/> <!-- maximum 140 char -->
-	<meta name="twitter:description" content="<?php echo $params['title'] ;?>"/> <!-- maximum 140 char -->
-	<meta name="twitter:image" content="https://tripodmedia.org/uploads/<?php echo $params['image'] ;?>"/>  <!-- when you post this page url in twitter , this image will be shown -->
-	<!-- twitter card ends here -->
-
 	<!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
 	<meta property="og:title" content="<?php echo $params['title'] ;?>"/>
 	<meta property="og:url" content="<?php echo $params['link'] ;?>"/>
@@ -56,6 +40,20 @@ if(empty($og_graph)){
 	<meta property="og:type" content="<?php echo $params['description'] ;?>"/> <!-- 'article' for single page  -->
 	<meta property="og:image" content="https://tripodmedia.org/uploads/<?php echo $params['image'] ;?>"/> <!-- when you post this page url in facebook , this image will be shown -->
 	<!-- facebook open graph ends here -->
+	<!-- twitter card starts from here, if you don't need remove this section -->
+	<meta name="twitter:card" content="<?php echo $params['description'] ;?>"/>
+	<meta name="twitter:site" content="@grandrubicon"/>
+	<meta name="twitter:creator" content="@grandrubicon"/>
+	<meta name="twitter:url" content="http://twitter.com"/>
+	<meta name="twitter:title" content="<?php echo $params['title'] ;?>"/> <!-- maximum 140 char -->
+	<meta name="twitter:description" content="<?php echo $params['title'] ;?>"/> <!-- maximum 140 char -->
+	<meta name="twitter:image" content="https://tripodmedia.org/uploads/<?php echo $params['image'] ;?>"/>  <!-- when you post this page url in twitter , this image will be shown -->
+	<!-- twitter card ends here -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" type="image/png" href="assets/img/TRIPODMEDIALOGO.png">
+	<meta name="description" content="<?php echo $params['description'] ;?>"/>
+	<meta name="keywords" content="keyword1, keyword2"/>
+	<meta name="author" content="TripodTimes"/>
 
 	<!-- desktop bookmark -->
 	<meta name="msapplication-TileColor" content="#ffffff">

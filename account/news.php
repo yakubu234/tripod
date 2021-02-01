@@ -31,27 +31,28 @@ if (isset($_SESSION['stuData'])) {
 	echo "<script> alert('Login First')</script>";
 	header('refresh:0;url=../login.php');
 }
-
 include "og.php";  
 ?>
-<!doctype html>
-<html lang="zxx">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Tripod Media Company| <?php echo $page." | ".$dataView; ?> </title>
-	<link rel="icon" type="image/png" href="../assets/img/TRIPODMEDIALOGO.png">
-	<meta name="description" content=" Admin Dashboard;"/>
-	<meta name="keywords" content="keyword1, keyword2"/>
-	<meta name="author" content="TripodTimes"/>
-	<meta name=“robots” content=“noimageindex,nofollow,nosnippet” >
 	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:title" content="<?php echo $heading;?>" />
 	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:type" content="<?php echo $heading?>" />
 	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:url" content="<?php  echo $link;?>" />
 	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:image" content="https://tripodmedia.org/uploads/<?php echo $image;?>" />
 	<meta property="og:image:secure_url" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
-	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:site_name" content="https://tripodmedia.org" />
-
+	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:site_name" content="https://tripodmedia.org" />	
+	<!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
+	<meta property="og:title" content="<?php echo $heading;?>"/>
+	<meta property="og:url" content="<?php  echo $link;?>"/>
+	<meta property="og:locale" content="en_US"/>
+	<meta property="og:site_name" content="Tripod Times"/>
+	<!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
+	<meta property="og:type" content="<?php echo $heading;?>"/> <!-- 'article' for single page  -->
+	<meta property="og:image" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/> <!-- when you post this page url in facebook , this image will be shown -->
+	<!-- facebook open graph ends here -->	
 	<!-- twitter card starts from here, if you don't need remove this section -->
 	<meta name="twitter:card" content="<?php echo $heading;?>"/>
 	<meta name="twitter:site" content="@grandrubicon"/>
@@ -61,36 +62,21 @@ include "og.php";
 	<meta name="twitter:description" content="<?php echo $heading;?>"/> <!-- maximum 140 char -->
 	<meta name="twitter:image" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/>  <!-- when you post this page url in twitter , this image will be shown -->
 	<!-- twitter card ends here -->
-
-	<!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
-	<meta property="og:title" content="<?php echo $heading;?>"/>
-	<meta property="og:url" content="<?php  echo $link;?>"/>
-	<meta property="og:locale" content="en_US"/>
-	<meta property="og:site_name" content="Tripod Times"/>
-	<!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
-	<meta property="og:type" content="<?php echo $heading;?>"/> <!-- 'article' for single page  -->
-	<meta property="og:image" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/> <!-- when you post this page url in facebook , this image will be shown -->
-	<!-- facebook open graph ends here -->
-
-
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" type="image/png" href="../assets/img/TRIPODMEDIALOGO.png">
+	<meta name="description" content=" Admin Dashboard;"/>
+	<meta name="keywords" content="keyword1, keyword2"/>
+	<meta name="author" content="TripodTimes"/>
+	<meta name=“robots” content=“noimageindex,nofollow,nosnippet” >
 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-
 	<link rel="stylesheet" href="../assets/css/animate.min.css">
-
 	<link rel="stylesheet" href="../assets/css/meanmenu.css">
-
 	<link rel="stylesheet" href="../assets/css/boxicons.min.css">
-
 	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
-
 	<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
-
 	<link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
-
 	<link rel="stylesheet" href="../assets/css/nice-select.min.css">
-
 	<link rel="stylesheet" href="../assets/css/style.css">
-
 	<link rel="stylesheet" href="../assets/css/responsive.css">
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../DataTables/datatables.min.css"/>
