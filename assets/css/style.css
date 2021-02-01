@@ -86,7 +86,7 @@
 		}
 		.popup{
 			width: 100%;
-			margin: 200px auto 0;
+			margin: 80px auto 0;
 			display: none;
 			position: fixed;
 			z-index: 101;
