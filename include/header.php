@@ -48,13 +48,13 @@
 							foreach ($dd as $key => $value) {
 								echo '
 								<div class="single-breaking-news">
-									<p>
-										<a href="news.php?read='.$value["heading"].'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 46).' ....</a>
-									</p>
+								<p>
+								<a href="news.php?read='.$value["heading"].'&dataID='.$value["id"].'">'.substr($value["heading"], 0, 46).' ....</a>
+								</p>
 								</div>
 								';if ($key >= 1) {break;}
 							}
-							 ?>							
+							?>							
 						</div>
 					</div>
 				</div>
@@ -136,11 +136,6 @@
 								</ul>
 							</li>
 							<li class="nav-item">
-								<a href="news.php?fetchTypeCat=Uncategorized" class="nav-link">
-									Uncategorized
-								</a>
-							</li>
-							<li class="nav-item">
 								<a href="news.php?fetchTypeCat=Entertainment" class="nav-link">
 									Entertainment
 								</a>
@@ -175,40 +170,9 @@
 							</li>
 
 							<li class="nav-item">
-								<a href="index-3.html#" class="nav-link">
-									Pages
-									<i class='bx bx-chevron-down'></i>
+								<a href="#" class="nav-link">
+									About us
 								</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item">
-										<a href="about-us.html" class="nav-link">
-											About us
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="index-3.html#" class="nav-link">
-											Account
-											<i class='bx bx-chevron-down'></i>
-										</a>
-										<ul class="dropdown-menu">
-											<li class="nav-item">
-												<a href="login.php" class="nav-link">
-													Login
-												</a>
-											</li>
-											<li class="nav-item">
-												<a href="register.html" class="nav-link">
-													Register
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-item">
-										<a href="contact.html" class="nav-link">
-											Contact
-										</a>
-									</li>
-								</ul>
 							</li>
 						</ul>
 						<div class="others-options d-flex align-items-center">

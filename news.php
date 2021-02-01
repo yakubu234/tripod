@@ -8,7 +8,7 @@ include "include/fetcher.php";
   	$data = $_GET['fetchTypeCat'];
   	$fetchTypeCat = fetchTypeCat($data);
   	$_SESSION['fetchTypeCat'] = $fetchTypeCat;
-  	header('Location: category.php?data='.$data);
+  	header('Location: page.php?data='.$data);
   }
   if ($_GET['fetchTypeLoc']) {
   	$data = $_GET['fetchTypeLoc'];
