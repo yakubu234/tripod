@@ -136,12 +136,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js
 <script src="../assets/js/main.js"></script>
 <script>
 	$(document).ready(function() {
-		var eventFired = function ( type ) {
-			var n = $('#demo_ixanfo')[0];
-			n.innerHTML += '<div>'+type+' event - '+new Date().getTime()+'</div>';
-			n.scrollTop = n.scrollHeight;      
-		}
-
+		
 		$('#example').DataTable();
 
 		var deleteLinks = document.querySelectorAll('.del');

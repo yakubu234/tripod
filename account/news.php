@@ -45,7 +45,7 @@ include "og.php";
 	<meta property="og:image:secure_url" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
 	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:site_name" content="https://tripodmedia.org" />	
 	<!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
-	<meta property="og:title" content="<?php echo $heading;?>"/>
+	<meta property="og:title" content="article"/>
 	<meta property="og:url" content="<?php  echo $link;?>"/>
 	<meta property="og:locale" content="en_US"/>
 	<meta property="og:site_name" content="Tripod Times"/>
@@ -150,12 +150,7 @@ include "og.php";
 <script src="../assets/js/main.js"></script>
 <script>
 	$(document).ready(function() {
-		var eventFired = function ( type ) {
-			var n = $('#demo_ixanfo')[0];
-			n.innerHTML += '<div>'+type+' event - '+new Date().getTime()+'</div>';
-			n.scrollTop = n.scrollHeight;      
-		}
-
+		
 		$('#example').DataTable();
 
 		var deleteLinks = document.querySelectorAll('.del');

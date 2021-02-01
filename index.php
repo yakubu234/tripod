@@ -132,8 +132,7 @@ $item = array_shift($indexData);
 						';
 						if ($index >= 3) {break;}
 					}
-					?>
-					
+					?>			
 
 				</div>
 			</div>

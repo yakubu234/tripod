@@ -8,7 +8,6 @@
 	<meta name="description" content=" Admin Dashboard;"/>
 	<meta name="keywords" content="keyword1, keyword2"/>
 	<meta name="author" content="TripodTimes"/>
-
 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 
 	<link rel="stylesheet" href="../assets/css/animate.min.css">

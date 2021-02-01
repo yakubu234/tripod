@@ -10,4 +10,4 @@ if(minutes<"10"){minutes="0"+minutes;}
 if(seconds<"10"){seconds="0"+seconds;}
 $("#days").html(days+"<span>Days</span>");$("#hours").html(hours+"<span>Hours</span>");$("#minutes").html(minutes+"<span>Minutes</span>");$("#seconds").html(seconds+"<span>Seconds</span>");}
 setInterval(function(){makeTimer();},0);$(window).on('load',function(){});}(jQuery));
-jQuery(document).ready(function($){window.setTimeout('hide_loader()',2010);});function hide_loader(){ $('.preloader').fadeOut();$('.preloader-area').addClass('preloader-deactivate');$('#staticBackdrop').show();}
+jQuery(document).ready(function($){window.setTimeout('hide_loader()',2010);});function hide_loader(){ $('.preloader').fadeOut();$('.preloader-area').addClass('preloader-deactivate');}
