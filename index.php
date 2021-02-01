@@ -12,7 +12,7 @@ $item = array_shift($indexData);
 			<p>
 				<img src="tripodimage45.jpeg" class="alert-image-s">
 				<br/>
-				<a href='' class='close'>Close</a>
+				<a class='close'>Close</a>
 			</p>
 		</div>
 	</div>
