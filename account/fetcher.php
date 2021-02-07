@@ -93,7 +93,7 @@ function newPost(){
 			];
 			$_SESSION['link'] = $data2;
 			$_SESSION['datagetUp'] = $data;
-			header('Refresh:0; url=news.php');
+			header('Refresh:0; url=../news.php');
 		
 	} catch(PDOException $e) {
 		if ($e->getCode() == 23000) {
