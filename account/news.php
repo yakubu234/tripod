@@ -26,7 +26,7 @@ if (isset($_SESSION['stuData'])) {
 	
 	$link =  'https://tripodmedia.org/?read='.$replacement.'&dataID='.$insid;
 
-	$linkD =  '<b style="color:black;" >'.$replacement.' </b><br><a style="color:red;" href ="https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid.'" target="_blank" id="p1">https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid.'<a/>';
+	$linkD =  '<b style="color:black;" >'.$replacement.' </b><br><a style="color:red;" href ="https://tripodmedia.org/?read='.$replacement.'&dataID='.$insid.'" target="_blank" id="p1">https://tripodmedia.org/?read='.$replacement.'&dataID='.$insid.'<a/>';
 }else{
 	echo "<script> alert('Login First')</script>";
 	header('refresh:0;url=../login.php');
