@@ -24,7 +24,7 @@ if (isset($_SESSION['stuData'])) {
 	$image = $datagetUp['image'];
 	$replacement = str_replace($search, $replace,$heading);
 	
-	$link =  'https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid;
+	$link =  'https://tripodmedia.org/?read='.$replacement.'&dataID='.$insid;
 
 	$linkD =  '<b style="color:black;" >'.$replacement.' </b><br><a style="color:red;" href ="https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid.'" target="_blank" id="p1">https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid.'<a/>';
 }else{
@@ -34,25 +34,17 @@ if (isset($_SESSION['stuData'])) {
 include "og.php";  
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:og="http://opengraphprotocol.org/schema/"  xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" xml:lang="en">
 <head>
 	<meta charset="utf-8">
 	<title>Tripod Media Company| <?php echo $page." | ".$dataView; ?> </title>
-	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:title" content="<?php echo $heading;?>" />
-	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:type" content="article" />
-	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:url" content="<?php  echo $link;?>" />
-	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:image" content="https://tripodmedia.org/uploads/<?php echo $image;?>" />
+	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:title" content="<?php echo $heading;?>"/>
+	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:type" content="article"/>
+	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:url" content="<?php  echo $link;?>"/>
+	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:image" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
 	<meta property="og:image:secure_url" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
-	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:site_name" content="https://tripodmedia.org" />	
+	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:site_name" content="<?php  echo $link;?>"/>	
 	<!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
-	<meta property="og:title" content="article"/>
-	<meta property="og:url" content="<?php  echo $link;?>"/>
-	<meta property="og:locale" content="en_US"/>
-	<meta property="og:site_name" content="Tripod Times"/>
-	<!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
-	<meta property="og:type" content="article"/> <!-- 'article' for single page  -->
-	<meta property="og:image" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/> <!-- when you post this page url in facebook , this image will be shown -->
-	<!-- facebook open graph ends here -->	
 	<!-- twitter card starts from here, if you don't need remove this section -->
 	<meta name="twitter:card" content="<?php echo $heading;?>"/>
 	<meta name="twitter:site" content="@grandrubicon"/>
@@ -65,9 +57,9 @@ include "og.php";
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../assets/img/TRIPODMEDIALOGO.png">
 	<meta name="description" content=" Admin Dashboard;"/>
-	<meta name="keywords" content="keyword1, keyword2"/>
+	<meta name="keywords" content="TripodTimes, Tripod media company limited"/>
 	<meta name="author" content="TripodTimes"/>
-	<meta name=“robots” content=“noimageindex,nofollow,nosnippet” >
+	<!-- <meta name=“robots” content=“noimageindex,nofollow,nosnippet” > -->
 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/css/animate.min.css">
 	<link rel="stylesheet" href="../assets/css/meanmenu.css">
