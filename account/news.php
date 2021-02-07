@@ -37,14 +37,19 @@ include "og.php";
 <html xmlns="http://www.w3.org/1999/xhtml"  xmlns:og="http://opengraphprotocol.org/schema/"  xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" xml:lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Tripod Media Company| <br> <?php echo $replacement; ?> <br> <?php echo $link; ?></title>
+	<title><?php echo $replacement; ?> <br> <?php echo $link; ?> <br>|Tripod Media Company| </title>
 	<meta prefix="og:http://ogp.me/ns#" data-react-helmet="true" property="og:title" content="<?php echo $heading;?>"/>
 	<meta prefix="og:http://ogp.me/ns#" data-react-helmet="true" property="og:type" content="article"/>
 	<link rel="image_src" href="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
-	<meta prefix="og:http://ogp.me/ns#" data-react-helmet="true" property="og:url" content="<?php  echo $link;?>"/>
+	<meta property="article:publisher" content="Tripod Times"/>
+	<meta property="article:section" content="News Platform"/>
+	<meta property="article:tag" content="News Platform"/>
+	<meta prefix="og:http://ogp.me/ns#" data-react-helmet="true" property="og:url" content="<?php echo $link;?>"/>
 	<meta prefix="og:http://ogp.me/ns#" data-react-helmet="true" property="og:image" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
 	<meta property="og:image:secure_url" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
-	<meta prefix="og:http://ogp.me/ns#" data-react-helmet="true" property="og:site_name" content="<?php  echo $link;?>"/>	
+	<meta property="og:image:width" content="640" /> 
+	<meta property="og:image:height" content="442" />
+	<meta prefix="og:http://ogp.me/ns#" data-react-helmet="true" property="og:site_name" content="https://tripodmedia.org"/>	
 	<!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
 	<!-- twitter card starts from here, if you don't need remove this section -->
 	<meta name="twitter:card" content="<?php echo $heading;?>"/>
@@ -57,9 +62,9 @@ include "og.php";
 	<!-- twitter card ends here -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../assets/img/TRIPODMEDIALOGO.png">
-	<meta name="description" content=" Admin Dashboard;"/>
+	<meta name="description" content="<?php echo $heading;?>"/>
 	<meta name="keywords" content="TripodTimes, Tripod media company limited"/>
-	<meta name="author" content="TripodTimes"/>
+	<meta name="author" content="Tripod Times"/>
 	<!-- <meta name=“robots” content=“noimageindex,nofollow,nosnippet” > -->
 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/css/animate.min.css">
