@@ -24,9 +24,9 @@ if (isset($_SESSION['stuData'])) {
 	$image = $datagetUp['image'];
 	$replacement = str_replace($search, $replace,$heading);
 	
-	$link =  'https://tripodmedia.org/'.$replacement.'&dataID='.$insid;
+	$link =  'https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid;
 
-	$linkD =  '<b style="color:black;" >'.$replacement.' </b><br><a style="color:red;" href ="https://tripodmedia.org/news.php?'.$replacement.'&dataID='.$insid.'" target="_blank" id="p1">https://tripodmedia.org/news.php?'.$replacement.'&dataID='.$insid.'<a/>';
+	$linkD =  '<b style="color:black;" >'.$replacement.' </b><br><a style="color:red;" href ="https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid.'" target="_blank" id="p1">https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid.'<a/>';
 }else{
 	echo "<script> alert('Login First')</script>";
 	header('refresh:0;url=../login.php');
