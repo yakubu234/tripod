@@ -37,14 +37,14 @@ include "og.php";
 <html xmlns="http://www.w3.org/1999/xhtml"  xmlns:og="http://opengraphprotocol.org/schema/"  xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" xml:lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Tripod Media Company| <?php echo $page." | ".$dataView; ?> </title>
-	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:title" content="<?php echo $heading;?>"/>
-	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:type" content="article"/>
+	<title>Tripod Media Company| <br> <?php echo $replacement; ?> <br> <?php echo $link; ?></title>
+	<meta prefix="og:http://ogp.me/ns#" data-react-helmet="true" property="og:title" content="<?php echo $heading;?>"/>
+	<meta prefix="og:http://ogp.me/ns#" data-react-helmet="true" property="og:type" content="article"/>
 	<link rel="image_src" href="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
-	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:url" content="<?php  echo $link;?>"/>
-	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:image" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
+	<meta prefix="og:http://ogp.me/ns#" data-react-helmet="true" property="og:url" content="<?php  echo $link;?>"/>
+	<meta prefix="og:http://ogp.me/ns#" data-react-helmet="true" property="og:image" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
 	<meta property="og:image:secure_url" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
-	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:site_name" content="<?php  echo $link;?>"/>	
+	<meta prefix="og:http://ogp.me/ns#" data-react-helmet="true" property="og:site_name" content="<?php  echo $link;?>"/>	
 	<!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
 	<!-- twitter card starts from here, if you don't need remove this section -->
 	<meta name="twitter:card" content="<?php echo $heading;?>"/>
