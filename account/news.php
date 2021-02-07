@@ -40,6 +40,7 @@ include "og.php";
 	<title>Tripod Media Company| <?php echo $page." | ".$dataView; ?> </title>
 	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:title" content="<?php echo $heading;?>"/>
 	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:type" content="article"/>
+	<link rel="image_src" href="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
 	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:url" content="<?php  echo $link;?>"/>
 	<meta prefix="og: http://ogp.me/ns#" data-react-helmet="true" property="og:image" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
 	<meta property="og:image:secure_url" content="https://tripodmedia.org/uploads/<?php echo $image;?>"/>
