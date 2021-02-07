@@ -24,16 +24,16 @@ if (isset($_SESSION['stuData'])) {
 	$image = $datagetUp['image'];
 	$replacement = str_replace($search, $replace,$heading);
 	
-	$link =  'https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid;
+	$link =  'https://tripodmedia.org/account/news.php?read='.$replacement.'&dataID='.$insid;
 
-	$linkD =  '<b style="color:black;" >'.$replacement.' </b><br><a style="color:red;" href ="https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid.'" target="_blank" id="p1">https://tripodmedia.org/news.php?read='.$replacement.'&dataID='.$insid.'<a/>';
+	$linkD =  '<b style="color:black;" >'.$replacement.' </b><br><a style="color:red;" href ="https://tripodmedia.org/account/news.php?read='.$replacement.'&dataID='.$insid.'" target="_blank" id="p1">https://tripodmedia.org/account/news.php?read='.$replacement.'&dataID='.$insid.'<a/>';
 }else{
 	echo "<script> alert('Login First')</script>";
 	header('refresh:0;url=../login.php');
 }
 include "og.php";  
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"  xmlns:og="http://opengraphprotocol.org/schema/"  xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" xml:lang="en">
 <head>
 	<meta charset="utf-8">
